@@ -99,7 +99,7 @@ const Hero = () => {
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
                 <div className="bg-black/5 p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] text-brand-text">
-                  Opa, e ai tudo bem? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
+                  Opa, tudo bem? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
                 </div>
               </div>
               <div className="flex gap-3 justify-end">
@@ -111,7 +111,7 @@ const Hero = () => {
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
                 <div className="bg-black/5 p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] text-brand-text">
-                  Super entendo você, isso acontece muito! O que eu faço é bater um papo leve com eles pra entender o momento de compra e o orçamento. Se eu sentir que o lead tá pronto, já agendo a visita direto na sua agenda. Assim você foca só em quem realmente quer fechar. Faz sentido? 😊
+                  Entendo perfeitamente, isso acontece muito! O que eu faço é bater um papo leve com eles pra entender o momento de compra e o orçamento. Se eu sentir que o lead tá pronto, já agendo a visita direto na sua agenda. Assim você foca só em quem realmente quer fechar. Faz sentido? 😊
                 </div>
               </div>
             </div>
@@ -228,7 +228,7 @@ const Features = () => {
           >
             <div className="glass rounded-[2rem] p-2 overflow-hidden">
               <img 
-                src="D:\Trabalhos\FlowBecker\Site\flowbecker (atualizado)\img\agente.png" 
+                src="https://herrington.com.br/wp-content/uploads/2024/04/blog2_assistente_virtual_com_ia.png" 
                 alt="Agente de IA FlowBecker" 
                 className="rounded-[1.8rem] w-full h-auto opacity-90"
                 referrerPolicy="no-referrer"
