@@ -14,7 +14,9 @@ import {
   Building2, 
   GraduationCap, 
   ShoppingBag,
-  ArrowRight
+  ArrowRight,
+  Mail,
+  Phone
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -64,7 +66,6 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Botão Hero vinculado ao WhatsApp */}
             <motion.a
               href={WHATSAPP_URL}
               target="_blank"
@@ -308,7 +309,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-black/5">
+    <section id="faq" className="py-24 px-6 bg-black/5">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -334,15 +335,43 @@ const FAQ = () => {
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-black/5">
+    <footer id="contato" className="py-24 px-6 border-t border-black/5 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div>
-            <div className="text-2xl font-extrabold tracking-tighter text-brand-text mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+          <div className="space-y-4">
+            <div className="text-2xl font-extrabold tracking-tighter text-brand-text">
               Flow<span className="text-brand-accent">Becker</span>
             </div>
-            <p className="text-brand-text/50 text-sm">© 2026 FlowBecker Automações. Todos os direitos reservados.</p>
+            <p className="text-brand-text/50 text-sm">Escalando atendimentos através de Inteligência Artificial avançada.</p>
           </div>
+
+          <div className="space-y-6">
+            <h4 className="font-bold text-brand-text">Tiago Becker</h4>
+            <div className="space-y-3">
+              <a href="tel:51998872626" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors">
+                <Phone className="w-4 h-4" /> 51 99887.2626
+              </a>
+              <a href="mailto:tiago-design@hotmail.com" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm">
+                <Mail className="w-4 h-4" /> tiago-design@hotmail.com
+              </a>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h4 className="font-bold text-brand-text">Francisco Flores</h4>
+            <div className="space-y-3">
+              <a href="tel:51999287270" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors">
+                <Phone className="w-4 h-4" /> 51 99928.7270
+              </a>
+              <a href="mailto:franciscoadrianoflores@gmail.com" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm">
+                <Mail className="w-4 h-4" /> franciscoadrianoflores@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-black/5 text-center">
+          <p className="text-brand-text/50 text-sm">© 2026 FlowBecker Automações. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
