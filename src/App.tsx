@@ -17,10 +17,7 @@ import {
   GraduationCap, 
   ShoppingBag,
   ArrowRight,
-  CheckCircle2,
-  Instagram,
-  Linkedin,
-  Twitter
+  CheckCircle2
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -99,7 +96,7 @@ const Hero = () => {
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
                 <div className="bg-black/5 p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] text-brand-text">
-                  Opa, tudo bem? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
+                  Opa, e ai tudo bem com voçê? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
                 </div>
               </div>
               <div className="flex gap-3 justify-end">
@@ -111,7 +108,7 @@ const Hero = () => {
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
                 <div className="bg-black/5 p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] text-brand-text">
-                  Entendo perfeitamente, isso acontece muito! O que eu faço é bater um papo leve com eles pra entender o momento de compra e o orçamento. Se eu sentir que o lead tá pronto, já agendo a visita direto na sua agenda. Assim você foca só em quem realmente quer fechar. Faz sentido? 😊
+                  Super entendo você, isso acontece muito! O que eu faço é bater um papo leve com eles pra entender o momento de compra e o orçamento. Se eu sentir que o lead tá pronto, já agendo a visita direto na sua agenda. Assim você foca só em quem realmente quer fechar. Faz sentido? 😊
                 </div>
               </div>
             </div>
@@ -228,7 +225,7 @@ const Features = () => {
           >
             <div className="glass rounded-[2rem] p-2 overflow-hidden">
               <img 
-                src="https://herrington.com.br/wp-content/uploads/2024/04/blog2_assistente_virtual_com_ia.png" 
+                src="/agente.png" 
                 alt="Agente de IA FlowBecker" 
                 className="rounded-[1.8rem] w-full h-auto opacity-90"
                 referrerPolicy="no-referrer"
@@ -344,12 +341,6 @@ const Footer = () => {
               Flow<span className="text-brand-accent">Becker</span>
             </div>
             <p className="text-brand-text/50 text-sm">© 2026 FlowBecker Automações. Todos os direitos reservados.</p>
-          </div>
-          
-          <div className="flex items-center space-x-6">
-            <a href="#" className="text-brand-text/40 hover:text-brand-text transition-colors"><Instagram className="w-6 h-6" /></a>
-            <a href="#" className="text-brand-text/40 hover:text-brand-text transition-colors"><Linkedin className="w-6 h-6" /></a>
-            <a href="#" className="text-brand-text/40 hover:text-brand-text transition-colors"><Twitter className="w-6 h-6" /></a>
           </div>
         </div>
       </div>
