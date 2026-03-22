@@ -7,19 +7,19 @@ import { useState } from 'react';
 import { 
   ChevronDown, 
   MessageSquare, 
-  Calendar, 
   Zap, 
-  ShieldCheck, 
   Users, 
   Scale, 
   Stethoscope, 
   Building2, 
   GraduationCap, 
   ShoppingBag,
-  ArrowRight,
-  CheckCircle2
+  ArrowRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+// URL do Agente de IA vinculada ao seu número
+const WHATSAPP_URL = "https://wa.me/555197995176?text=Olá! Vi o site da FlowBecker e gostaria de saber mais sobre os Agentes de IA.";
 
 const Navbar = () => {
   return (
@@ -42,7 +42,6 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-      {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/20 blur-[120px] rounded-full"></div>
@@ -65,14 +64,18 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.button
+            {/* Botão Hero vinculado ao WhatsApp */}
+            <motion.a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto bg-gradient-to-r from-brand-text to-brand-accent text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-brand-accent/30 flex items-center justify-center gap-2 group"
             >
               Começar Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+            </motion.a>
             <button className="w-full sm:w-auto px-10 py-4 rounded-2xl font-bold text-lg text-brand-text border border-brand-text/10 hover:bg-brand-text/5 transition-colors">
               Ver Demonstração
             </button>
@@ -113,7 +116,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          {/* Decorative elements */}
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full animate-pulse"></div>
           <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full animate-pulse"></div>
         </motion.div>
@@ -231,7 +233,6 @@ const Features = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            {/* Floating Stats */}
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
@@ -357,15 +358,22 @@ export default function App() {
         <Niches />
         <Features />
         
-        {/* CTA Section */}
+        {/* Seção CTA vinculada ao WhatsApp */}
         <section className="py-20 px-6">
           <div className="max-w-5xl mx-auto glass rounded-[3rem] p-12 text-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-text/5 to-brand-accent/5 -z-10"></div>
             <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-6">Pronto para escalar seu atendimento?</h2>
             <p className="text-brand-text/60 mb-10 max-w-xl mx-auto">Junte-se a centenas de empresas que já automatizaram sua qualificação de leads com a FlowBecker.</p>
-            <button className="bg-brand-text text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-brand-text/90 transition-all shadow-xl shadow-brand-text/10">
+            <motion.a 
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block bg-brand-text text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-brand-text/90 transition-all shadow-xl shadow-brand-text/10"
+            >
               Começar Agora
-            </button>
+            </motion.a>
           </div>
         </section>
 
