@@ -1,28 +1,94 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-bg: #FFFFF0;
-  --color-brand-text: #00008B;
-  --color-brand-accent: #008000; /* Green for Becker */
-  --color-brand-purple: #a855f7;
-}
+@import "tailwindcss";
 
 @layer base {
+  :root {
+    --color-brand-bg: #FFFFF0;
+    --color-brand-text: #00008B;
+    --color-brand-accent: #008000;
+    --color-brand-purple: #a855f7;
+  }
+  
   body {
-    @apply bg-brand-bg text-brand-text font-sans antialiased;
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
 }
 
+/* Classes utilitárias */
 .glass {
-  @apply bg-black/5 backdrop-blur-lg border border-black/10 shadow-xl;
+  background-color: rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.glass-white {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .glass-hover {
-  @apply hover:bg-black/10 transition-all duration-300;
+  transition: all 0.3s ease;
 }
 
+.glass-hover:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Cores personalizadas */
+.text-brand-text {
+  color: var(--color-brand-text);
+}
+
+.text-brand-accent {
+  color: var(--color-brand-accent);
+}
+
+.text-brand-purple {
+  color: var(--color-brand-purple);
+}
+
+.bg-brand-text {
+  background-color: var(--color-brand-text);
+}
+
+.bg-brand-accent {
+  background-color: var(--color-brand-accent);
+}
+
+.bg-brand-accent-light {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.border-brand-accent {
+  border-color: var(--color-brand-accent);
+}
+
+/* Gradientes */
+.bg-gradient-brand {
+  background: linear-gradient(to right, var(--color-brand-text), var(--color-brand-accent));
+}
+
+.text-gradient-brand {
+  background: linear-gradient(to right, var(--color-brand-text), var(--color-brand-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Efeitos de animação */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -31,4 +97,35 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Estilos para links */
+a {
+  transition: all 0.2s ease;
+}
+
+/* Container de mensagens do chat */
+.chat-bubble-ai {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+}
+
+.chat-bubble-user {
+  background-color: rgba(0, 128, 0, 0.1);
+  border-radius: 1rem;
+  border-top-right-radius: 0;
 }

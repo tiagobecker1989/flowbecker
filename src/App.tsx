@@ -20,21 +20,21 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-// URL do Agente de IA vinculada ao seu número
-const WHATSAPP_URL = "https://wa.me/555197995176?text=Olá! Vi o site da FlowBecker e gostaria de saber mais sobre os Agentes de IA.";
+// URL do WhatsApp corrigida
+const WHATSAPP_URL = "https://wa.me/55519979176?text=Olá! Vi o site da FlowBecker e gostaria de saber mais sobre os Agentes de IA.";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-black/5 px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-white px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="text-2xl font-extrabold tracking-tighter text-brand-text">
           Flow<span className="text-brand-accent">Becker</span>
         </div>
         
-        <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-text/80">
-          <a href="#solucoes" className="hover:text-brand-text transition-colors">Soluções</a>
-          <a href="#como-funciona" className="hover:text-brand-text transition-colors">Como Funciona</a>
-          <a href="#contato" className="hover:text-brand-text transition-colors">Contato</a>
+        <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#solucoes" className="text-brand-text/80 hover:text-brand-accent transition-colors">Soluções</a>
+          <a href="#como-funciona" className="text-brand-text/80 hover:text-brand-accent transition-colors">Como Funciona</a>
+          <a href="#contato" className="text-brand-text/80 hover:text-brand-accent transition-colors">Contato</a>
         </div>
       </div>
     </nav>
@@ -55,11 +55,11 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-brand-accent/10 text-brand-accent rounded-full border border-brand-accent/20">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-brand-accent-light text-brand-accent rounded-full border border-brand-accent/20">
             Inteligência Artificial de Ponta
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-brand-text mb-6 leading-[1.1] tracking-tight">
-            Dê um <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-text to-brand-accent">Flow</span> no seu atendimento e converta leads 24/7
+            Dê um <span className="text-gradient-brand">Flow</span> no seu atendimento e converta leads 24/7
           </h1>
           <p className="text-lg md:text-xl text-brand-text/70 mb-10 max-w-2xl mx-auto leading-relaxed">
             SDRs inteligentes que qualificam leads e agendam reuniões no piloto automático, enquanto você foca no que realmente importa: fechar negócio.
@@ -72,7 +72,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto bg-gradient-to-r from-brand-text to-brand-accent text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-brand-accent/30 flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto bg-gradient-brand text-white px-10 py-4 rounded-2xl font-bold text-lg shadow-2xl flex items-center justify-center gap-2 group"
             >
               Começar Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -89,18 +89,18 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mt-20 relative"
         >
-          <div className="glass rounded-3xl p-4 md:p-8 max-w-4xl mx-auto relative z-10">
-            <div className="flex items-center gap-4 mb-6 border-b border-black/5 pb-4">
+          <div className="glass-white rounded-3xl p-4 md:p-8 max-w-4xl mx-auto relative z-10">
+            <div className="flex items-center gap-4 mb-6 border-b border-gray-200 pb-4">
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <div className="ml-4 text-xs text-brand-text/50 font-mono">flowbecker-sdr-v2.ai</div>
+              <div className="ml-4 text-xs text-gray-500 font-mono">flowbecker-sdr-v2.ai</div>
             </div>
             <div className="space-y-4 text-left">
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
                 <div className="bg-black/5 p-4 rounded-2xl rounded-tl-none text-sm max-w-[80%] text-brand-text">
-                  Opa, e ai tudo bem com voçê? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
+                  Opa, e ai tudo bem com você? 👋 Vi que você deu uma olhada na nossa parte de automação. Como tá o fluxo de leads por aí hoje? Algum desafio que eu possa te ajudar a resolver?
                 </div>
               </div>
               <div className="flex gap-3 justify-end">
@@ -136,7 +136,7 @@ const Niches = () => {
   ];
 
   return (
-    <section id="solucoes" className="py-24 px-6 bg-black/5">
+    <section id="solucoes" className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -158,9 +158,9 @@ const Niches = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               whileHover={{ y: -5 }}
-              className="glass p-8 rounded-3xl glass-hover group"
+              className="glass-white p-8 rounded-3xl hover:bg-gray-50 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-brand-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+              <div className="w-14 h-14 bg-brand-accent-light rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
                 <niche.icon className="w-8 h-8 text-brand-accent" />
               </div>
               <h3 className="text-xl font-bold text-brand-text mb-3">{niche.title}</h3>
@@ -208,7 +208,7 @@ const Features = () => {
             <div className="space-y-8">
               {features.map((f, i) => (
                 <div key={i} className="flex gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 bg-brand-accent/10 rounded-full flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 bg-brand-accent-light rounded-full flex items-center justify-center">
                     <f.icon className="w-6 h-6 text-brand-accent" />
                   </div>
                   <div>
@@ -226,18 +226,21 @@ const Features = () => {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="glass rounded-[2rem] p-2 overflow-hidden">
+            <div className="glass-white rounded-[2rem] p-2 overflow-hidden">
               <img 
                 src="/agente.png" 
                 alt="Agente de IA FlowBecker" 
-                className="rounded-[1.8rem] w-full h-auto opacity-90"
-                referrerPolicy="no-referrer"
+                className="rounded-[1.8rem] w-full h-auto"
+                onError={(e) => {
+                  console.error('Imagem não encontrada:', e);
+                  e.currentTarget.src = 'https://via.placeholder.com/800x600?text=Agente+IA';
+                }}
               />
             </div>
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -top-6 -right-6 glass p-6 rounded-2xl border-brand-accent/30"
+              className="absolute -top-6 -right-6 glass-white p-6 rounded-2xl border border-brand-accent/30"
             >
               <div className="text-3xl font-bold text-brand-accent">+85%</div>
               <div className="text-xs text-brand-text/60 uppercase tracking-wider font-bold">Conversão de Leads</div>
@@ -245,7 +248,7 @@ const Features = () => {
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-6 -left-6 glass p-6 rounded-2xl border-brand-purple/30"
+              className="absolute -bottom-6 -left-6 glass-white p-6 rounded-2xl border border-brand-purple/30"
             >
               <div className="text-3xl font-bold text-brand-purple">24/7</div>
               <div className="text-xs text-brand-text/60 uppercase tracking-wider font-bold">Atendimento Ativo</div>
@@ -257,16 +260,18 @@ const Features = () => {
   );
 };
 
-const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
+const FAQItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-black/5 last:border-0">
+    <div className="border-b border-gray-200 last:border-0">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <span className="text-lg font-semibold text-brand-text/80 group-hover:text-brand-text transition-colors">{question}</span>
+        <span className="text-lg font-semibold text-brand-text/80 group-hover:text-brand-accent transition-colors">
+          {question}
+        </span>
         <ChevronDown className={`w-5 h-5 text-brand-text/40 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
@@ -309,7 +314,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 px-6 bg-black/5">
+    <section id="faq" className="py-24 px-6 bg-gray-50">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -321,7 +326,7 @@ const FAQ = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-4">Dúvidas Frequentes</h2>
           <p className="text-brand-text/60">Tudo o que você precisa saber para dar o próximo passo.</p>
         </div>
-        <div className="glass rounded-[2rem] px-8 py-4">
+        <div className="glass-white rounded-[2rem] px-8 py-4">
           {faqs.map((faq, i) => (
             <div key={i}>
               <FAQItem question={faq.question} answer={faq.answer} />
@@ -335,43 +340,59 @@ const FAQ = () => {
 
 const Footer = () => {
   return (
-    <footer id="contato" className="py-24 px-6 border-t border-black/5 bg-white">
+    <footer id="contato" className="py-16 px-6 bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div className="space-y-4">
             <div className="text-2xl font-extrabold tracking-tighter text-brand-text">
               Flow<span className="text-brand-accent">Becker</span>
             </div>
-            <p className="text-brand-text/50 text-sm">Escalando atendimentos através de Inteligência Artificial avançada.</p>
+            <p className="text-sm text-brand-text/50">
+              Escalando atendimentos através de Inteligência Artificial avançada.
+            </p>
           </div>
 
-          <div className="space-y-6">
-            <h4 className="font-bold text-brand-text">Tiago Becker</h4>
-            <div className="space-y-3">
-              <a href="tel:51998872626" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors">
-                <Phone className="w-4 h-4" /> 51 99887.2626
+          <div className="space-y-4">
+            <h4 className="font-bold text-lg text-brand-text">Tiago Becker</h4>
+            <div className="space-y-2">
+              <a 
+                href="tel:+5551998872626" 
+                className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors"
+              >
+                <Phone className="w-4 h-4" /> (51) 99887-2626
               </a>
-              <a href="mailto:tiago-design@hotmail.com" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm">
+              <a 
+                href="mailto:tiago-design@hotmail.com" 
+                className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm"
+              >
                 <Mail className="w-4 h-4" /> tiago-design@hotmail.com
               </a>
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h4 className="font-bold text-brand-text">Francisco Flores</h4>
-            <div className="space-y-3">
-              <a href="tel:51999287270" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors">
-                <Phone className="w-4 h-4" /> 51 99928.7270
+          <div className="space-y-4">
+            <h4 className="font-bold text-lg text-brand-text">Francisco Flores</h4>
+            <div className="space-y-2">
+              <a 
+                href="tel:+5551999287270" 
+                className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors"
+              >
+                <Phone className="w-4 h-4" /> (51) 99928-7270
               </a>
-              <a href="mailto:franciscoadrianoflores@gmail.com" className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm">
+              <a 
+                href="mailto:franciscoadrianoflores@gmail.com" 
+                className="flex items-center gap-3 text-brand-text/60 hover:text-brand-accent transition-colors text-sm"
+              >
                 <Mail className="w-4 h-4" /> franciscoadrianoflores@gmail.com
               </a>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-black/5 text-center">
-          <p className="text-brand-text/50 text-sm">© 2026 FlowBecker Automações. Todos os direitos reservados.</p>
+        <div className="pt-8 border-t border-gray-200 text-center">
+          <p className="text-sm text-brand-text/40">
+            © 2026 FlowBecker Automações. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
@@ -380,7 +401,7 @@ const Footer = () => {
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-blue-500/30">
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <Hero />
@@ -389,17 +410,21 @@ export default function App() {
         
         {/* Seção CTA vinculada ao WhatsApp */}
         <section className="py-20 px-6">
-          <div className="max-w-5xl mx-auto glass rounded-[3rem] p-12 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-text/5 to-brand-accent/5 -z-10"></div>
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-6">Pronto para escalar seu atendimento?</h2>
-            <p className="text-brand-text/60 mb-10 max-w-xl mx-auto">Junte-se a centenas de empresas que já automatizaram sua qualificação de leads com a FlowBecker.</p>
+          <div className="max-w-5xl mx-auto glass-white rounded-[3rem] p-12 text-center relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-text/5 to-brand-accent/5 -z-10" />
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-6">
+              Pronto para escalar seu atendimento?
+            </h2>
+            <p className="text-brand-text/60 mb-10 max-w-xl mx-auto">
+              Junte-se a centenas de empresas que já automatizaram sua qualificação de leads com a FlowBecker.
+            </p>
             <motion.a 
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="inline-block bg-brand-text text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-brand-text/90 transition-all shadow-xl shadow-brand-text/10"
+              className="inline-block bg-brand-text text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl hover:bg-brand-text/90"
             >
               Começar Agora
             </motion.a>
