@@ -59,14 +59,15 @@ const Hero = () => {
             Inteligência Artificial de Ponta
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-brand-text mb-6 leading-[1.1] tracking-tight">
-            Dê um <span className="text-gradient-brand">Flow</span> no seu atendimento e converta leads 24/7
+            Transforme seu WhatsApp em uma <span className="text-gradient-brand">Máquina</span> autônoma de qualificação e vendas.
           </h1>
           <p className="text-lg md:text-xl text-brand-text/70 mb-10 max-w-2xl mx-auto leading-relaxed">
             SDRs inteligentes que qualificam leads e agendam reuniões no piloto automático, enquanto você foca no que realmente importa: fechar negócio.
           </p>
-          
+            
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.a
+            {/* Botão Começar Agora - Ocultado */}
+            {/* <motion.a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -76,10 +77,19 @@ const Hero = () => {
             >
               Começar Agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
-            <button className="w-full sm:w-auto px-10 py-4 rounded-2xl font-bold text-lg text-brand-text border border-brand-text/10 hover:bg-brand-text/5 transition-colors">
+            </motion.a> */}
+            
+            {/* Botão Ver Demonstração - Agora com o link do WhatsApp */}
+            <motion.a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto px-10 py-4 rounded-2xl font-bold text-lg text-brand-text border border-brand-text/10 hover:bg-brand-text/5 transition-colors"
+            >
               Ver Demonstração
-            </button>
+            </motion.a>
           </div>
         </motion.div>
 
@@ -94,7 +104,7 @@ const Hero = () => {
               <div className="w-3 h-3 rounded-full bg-red-500"></div>
               <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <div className="ml-4 text-xs text-gray-500 font-mono">flowbecker-sdr-v2.ai</div>
+              <div className="ml-4 text-xs text-gray-500 font-mono">Agente Autonomo</div>
             </div>
             <div className="space-y-4 text-left">
               <div className="flex gap-3">
@@ -107,7 +117,7 @@ const Hero = () => {
                 <div className="bg-brand-accent/10 p-4 rounded-2xl rounded-tr-none text-sm max-w-[80%] text-brand-text">
                   Tudo certo! Cara, meu maior problema é no imobiliário. Entra muito lead, mas perco muito tempo com quem só tá curioso.
                 </div>
-                <div className="w-8 h-8 rounded-full bg-brand-text/20 flex-shrink-0 flex items-center justify-center text-xs font-bold text-brand-text">U</div>
+                <div className="w-8 h-8 rounded-full bg-brand-text/20 flex-shrink-0 flex items-center justify-center text-xs font-bold text-brand-text">Cliente</div>
               </div>
               <div className="flex gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-accent flex-shrink-0 flex items-center justify-center text-xs font-bold text-white">AI</div>
@@ -415,19 +425,10 @@ export default function App() {
             <h2 className="text-3xl md:text-5xl font-bold text-brand-text mb-6">
               Pronto para escalar seu atendimento?
             </h2>
-            <p className="text-brand-text/60 mb-10 max-w-xl mx-auto">
+            <h2 className="text-brand-text/60 mb-10 max-w-xl mx-auto">
               Junte-se a centenas de empresas que já automatizaram sua qualificação de leads com a FlowBecker.
-            </p>
-            <motion.a 
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-block bg-brand-text text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all shadow-xl hover:bg-brand-text/90"
-            >
-              Começar Agora
-            </motion.a>
+            </h2>
+           
           </div>
         </section>
 
